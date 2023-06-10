@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,30 +8,32 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js"></script>
+  <script defer src="js/script.js"></script>
   <title>Calculator</title>
 </head>
 <body>
   <h1>Calculator</h1>
   <div id="calculator">
     <div id="result">
-      <label></label>
+      <input id="result-description" value></input>
       <label id="result-value">0</label>
     </div>
     <div class="buttons">
       <button id="one" onclick="clickNumber(this.value)" value="1">1</button>
-      <button>2</button>
-      <button>3</button>
-      <button id="add">+</button>
+      <button onclick="clickNumber(this.value)" value="2">2</button>
+      <button onclick="clickNumber(this.value)" value="3">3</button>
+      <button id="add" class="operation" onclick="clickNumber(this.value)" value="+">+</button>
       <button>4</button>
       <button>5</button>
       <button>6</button>
-      <button>-</button>
+      <button class="operation">-</button>
       <button>7</button>
       <button>8</button>
       <button>9</button>
-      <button>*</button>
+      <button class="operation">*</button>
+      <button class="operation">/</button>
       <button>0</button>
+      <button id="equal" onclick="resultNumber()">=</button>
     </div>
   </div>
 </body>
