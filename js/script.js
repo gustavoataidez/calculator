@@ -1,28 +1,14 @@
-const add = document.getElementById("add")
-const one = document.getElementById("one")
-const two = document.getElementById("two")
-const three = document.getElementById("three")
-let conteudoResultado = document.getElementById("result-value").innerText;
+let conteudoResultado = document.getElementById("result-value");
 var descricao = document.getElementById("result-description")
 
+conteudoResultado.innerText = 0
 
-var numberglobal = []
-var calcular = []
 function clickNumber(number){
-  descricao.value += number
-  console.log(descricao)
-}
-function sum(a,b){
-  return a + b
+  descricao.innerText += number
 }
 
-function resultNumber(){
-  alert(eval(descricao))
-}
-
-function sum() {
-for (let i = 0; i < numberglobal.length; i++) {
-  var numero = numberglobal[i];
-  calcular.push(numero)
-}
+function result() {
+  let formula = descricao.innerText
+  let resultado = eval(formula)
+  conteudoResultado.innerText = resultado
 }
