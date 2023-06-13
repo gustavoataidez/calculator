@@ -9,30 +9,32 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script defer src="js/script.js"></script>
+  <script src="https://kit.fontawesome.com/818bd4c52a.js" crossorigin="anonymous"></script>
   <title>Calculator</title>
 </head>
 <body>
-  <h1>Calculator</h1>
+  <h1></h1>
   <div id="calculator">
     <div id="result">
       <label id="result-description"></label>
       <label id="result-value"></label>
     </div>
     <div class="buttons">
-      <button id="one" onclick="clickNumber(this.value)" value="1">1</button>
-      <button onclick="clickNumber(this.value)" value="2">2</button>
-      <button onclick="clickNumber(this.value)" value="3">3</button>
-      <button id="add" class="operation" onclick="clickNumber(this.value)" value="+">+</button>
+      <button id="one" onclick="clickNumber(this.value)" value="7">7</button>
+      <button onclick="clickNumber(this.value)" value="8">8</button>
+      <button onclick="clickNumber(this.value)" value="9">9</button>
+      <button id="clear" onclick="clearAll()">C</button>
       <button onclick="clickNumber(this.value)" value="4">4</button>
       <button onclick="clickNumber(this.value)" value="5">5</button>
       <button onclick="clickNumber(this.value)" value="6">6</button>
-      <button class="operation" onclick="clickNumber(this.value)" value="-">-</button>
-      <button onclick="clickNumber(this.value)" value="7">7</button>
-      <button onclick="clickNumber(this.value)" value="8">8</button>
-      <button onclick="clickNumber(this.value)" value="9">9</button>
-      <button class="operation" onclick="clickNumber(this.value)" value="*">*</button>
-      <button class="operation" onclick="clickNumber(this.value)" value="/">/</button>
+      <button class="operation" onclick="clickOpp(this.value)" value="+"><i class="fa-solid fa-plus"></i></button>
+      <button onclick="clickNumber(this.value)" value="1">1</button>
+      <button onclick="clickNumber(this.value)" value="2">2</button>
+      <button onclick="clickNumber(this.value)" value="3">3</button>
+      <button class="operation" onclick="clickOpp(this.value)" value="-"><i class="fa-solid fa-minus"></i></button>
+      <button class="operation" onclick="clickOpp(this.value)" value="/"><i class="fa-solid fa-divide"></i></button>
       <button onclick="clickNumber(this.value)" value="0">0</button>
+      <button class="operation" onclick="clickOpp(this.value)" value="*"><i class="fa-solid fa-xmark"></i></button>
       <button id="equal" onclick="result()">=</button>
     </div>
   </div>
